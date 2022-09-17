@@ -36,7 +36,7 @@
             <!--모델에 있는 아이템을 꺼내서 사용하는 문법-->
             <tr th:each="item : ${items}">
                 <td><a href="item.html" th:href="@{/basic/items/{itemId}(itemId=${item.id})}" th:text="${item.id}">회원아이디</a></td>
-                <td><a href="item.html" th:href="@{/basic/items/{itemId}(itemId=${item.id})}" th:text="${item.itemName}">상품명</a></td>
+                <td><a href="item.html" th:href="@{|/basic/items/{itemId}(${item.id}|}" th:text="${item.itemName}">상품명</a></td>
                 <td th:text="${item.price}">10000</td>
                 <td th:text="${item.quantity}">10</td>
             </tr>
